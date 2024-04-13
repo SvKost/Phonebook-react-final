@@ -13,12 +13,12 @@ const Navigation = () => {
   const { isLoggedIn } = useSelector(selectIsLoggedIn);
   return (
     <div>
-      {isLoggedIn && (
-        <div className={css.nav}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/contacts">Contacts</NavLink>
-        </div>
-      )}
+      {/* {isLoggedIn && ( */}
+      <div className={css.nav}>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/contacts">Contacts</NavLink>
+      </div>
+      {/* )} */}
     </div>
   );
 };

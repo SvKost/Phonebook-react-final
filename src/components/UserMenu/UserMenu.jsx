@@ -3,7 +3,7 @@ import { selectUser } from "../../redux/auth/selectors";
 import { logout } from "../../redux/auth/operations";
 
 const UserMenu = () => {
-  const { user } = useSelector(selectUser);
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   return (

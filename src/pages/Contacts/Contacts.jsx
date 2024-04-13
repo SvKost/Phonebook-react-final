@@ -10,9 +10,9 @@ const Contacts = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
 
-  useEffect(() => {
-    dispatch(fetchContacts()); // TODO: change api request function
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(); // TODO: change api request function
+  // }, [dispatch]);
 
   return (
     <div>
