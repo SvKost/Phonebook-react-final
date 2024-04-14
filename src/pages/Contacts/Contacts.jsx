@@ -5,6 +5,7 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 
 import { selectIsLoading } from "../../redux/auth/selectors";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,9 @@ const Contacts = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Contacts</title>
+      </Helmet>
       <ContactForm />
       <SearchBox />
       <ContactList />
