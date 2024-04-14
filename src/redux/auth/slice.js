@@ -18,7 +18,7 @@ const authSlice = createSlice({
   initialState: INITIAL_STATE,
   extraReducers: (builder) => {
     builder
-      // register
+      // REGISTER
       .addCase(register.pending, (state) => {
         state.isLoading = true;
         state.isError = null;
@@ -34,7 +34,7 @@ const authSlice = createSlice({
         state.isError = true;
       })
 
-      //login
+      //LOGIN
       .addCase(login.pending, (state) => {
         state.isLoading = true;
         state.isError = null;
@@ -50,7 +50,7 @@ const authSlice = createSlice({
         state.isError = true;
       })
 
-      //logout
+      //LOGOUT
       .addCase(logout.pending, (state) => {
         state.isLoading = true;
         state.isError = null;
@@ -63,14 +63,14 @@ const authSlice = createSlice({
         state.isError = true;
       })
 
-      //refresh
+      //REFRESH
       .addCase(refresh.pending, (state) => {
         state.isRefreshing = true;
         state.isError = null;
       })
       .addCase(refresh.fulfilled, (state, action) => {
         state.isRefreshing = false;
-        state.userData = action.payload.user;
+        state.user = action.payload;
         state.isLoggedIn = true;
       })
       .addCase(refresh.rejected, (state) => {
