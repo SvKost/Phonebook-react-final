@@ -36,17 +36,15 @@ export const login = createAsyncThunk(
   }
 );
 
-//Використовується у компоненті UserMenu у шапці додатку.
 export const logout = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
   try {
-    const response = await requestLogout();
-    return response;
+    await requestLogout();
+    return;
   } catch (err) {
     return thunkAPI.rejectWithValue(err.message);
   }
 });
 
-//Використовується у компоненті App під час його монтування.
 export const refresh = createAsyncThunk(
   "auth/refresh ",
   async (_, thunkAPI) => {
@@ -56,6 +54,7 @@ export const refresh = createAsyncThunk(
     setToken(token);
     try {
       const response = await requestCurrentUser();
+
       return response;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);

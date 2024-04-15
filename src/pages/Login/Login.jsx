@@ -12,9 +12,9 @@ const Login = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Login</title>
-      </Helmet>
+      {/* <Helmet> */}
+      <title>Login</title>
+      {/* </Helmet> */}
       <LoginForm onLogin={onLogin} />
     </div>
   );

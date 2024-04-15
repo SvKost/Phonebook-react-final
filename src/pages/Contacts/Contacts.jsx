@@ -17,9 +17,9 @@ const Contacts = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Contacts</title>
-      </Helmet>
+      {/* <Helmet> */}
+      <title>Contacts</title>
+      {/* </Helmet> */}
       <ContactForm />
       <SearchBox />
       <ContactList />

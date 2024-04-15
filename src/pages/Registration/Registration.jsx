@@ -12,9 +12,9 @@ const Registration = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Registration</title>
-      </Helmet>
+      {/* <Helmet> */}
+      <title>Registration</title>
+      {/* </Helmet> */}
       <RegistrationForm onRegister={onRegister} />
     </div>
   );
