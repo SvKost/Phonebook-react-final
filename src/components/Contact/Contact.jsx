@@ -10,23 +10,25 @@ export default function Contact({ contact: { id, name, number } }) {
   const handleDeleteContact = (contactId) => dispatch(deleteContact(contactId));
 
   return (
-    <div className={css.contactItem}>
-      <div className={css.contactInfo}>
-        <p>
-          <FaUser className={css.contactIcon} />
-          {name}
-        </p>
-        <p>
-          <FaPhone className={css.contactIcon} />
-          {number}
-        </p>
+    <div className={css.contactsContainer}>
+      <div className={css.contactItem}>
+        <div className={css.contactInfo}>
+          <p>
+            <FaUser className={css.contactIcon} />
+            {name}
+          </p>
+          <p>
+            <FaPhone className={css.contactIcon} />
+            {number}
+          </p>
+        </div>
+        <button
+          className={css.contactBtn}
+          onClick={() => handleDeleteContact(id)}
+        >
+          Delete
+        </button>
       </div>
-      <button
-        className={css.contactBtn}
-        onClick={() => handleDeleteContact(id)}
-      >
-        Delete
-      </button>
     </div>
   );
 }

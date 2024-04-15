@@ -8,18 +8,17 @@ const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
 
   return (
-    <div>
+    <div className={css.contactListContainer}>
       {filteredContacts.length !== 0 ? (
         <ul className={css.contactList}>
           {filteredContacts.map((contact) => (
-            // <Contact key={contact.id} contact={contact} />
             <li key={contact.id}>
               <Contact contact={contact} />
             </li>
           ))}
         </ul>
       ) : (
-        <p>There are no matching contacts!</p>
+        <p>There are no contacts!</p>
       )}
     </div>
   );

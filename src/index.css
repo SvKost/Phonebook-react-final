@@ -1,6 +1,11 @@
-body {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #cbfbfc7c;
 }
 
 h1,
@@ -22,4 +27,9 @@ ol {
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }

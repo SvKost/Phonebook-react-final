@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import { login } from "../../redux/auth/operations";
-import { Helmet } from "react-helmet";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -12,9 +11,7 @@ const LoginPage = () => {
 
   return (
     <div>
-      {/* <Helmet> */}
       <title>Login Page</title>
-      {/* </Helmet> */}
       <LoginForm onLogin={onLogin} />
     </div>
   );

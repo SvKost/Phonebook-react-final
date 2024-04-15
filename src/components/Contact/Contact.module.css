@@ -21,31 +21,35 @@
 .contactInfo {
   display: flex;
   flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
   gap: 6px;
   font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .contactBtn {
-  height: 2.3em;
-  width: 5em;
   display: flex;
+  min-width: 90px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
-  padding: 8px;
-  border: solid 1px grey;
-  border-radius: 5px;
-  font-weight: 600;
-  color: rgb(75, 74, 74);
-  background-color: rgba(0, 0, 255, 0.068);
+  gap: 8px;
+  border-radius: 15px;
+  line-height: 1.2;
+  font-size: 16px;
+  border: none;
+  font-family: inherit;
+  color: #f6f6f6;
+  background-color: #0c92bbb9;
 }
 
 .contactBtn:hover,
-.contactBtn:active {
-  border-color: rgb(88, 88, 88);
-  background-color: rgba(0, 0, 255, 0.137);
-}
-
 .contactBtn:active,
 .contactBtn:focus {
-  border-color: blue;
+  background-color: #fff;
+  color: #1b1b1b;
+  box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
 }

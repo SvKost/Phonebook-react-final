@@ -34,7 +34,6 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h1 className={css.formTitle}>Phonebook</h1>
       <Formik
         initialValues={INITIAL_FORM_DATA}
         validationSchema={PhonebookSchema}

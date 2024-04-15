@@ -1,12 +1,8 @@
-import { Helmet } from "react-helmet";
-
 const HomePage = () => {
   return (
     <div>
-      {/* <Helmet> */}
       <title>Home Page</title>
-      {/* </Helmet> */}
-      Home Page
+      You can see your contacts in the Phonebook
     </div>
   );
 };
