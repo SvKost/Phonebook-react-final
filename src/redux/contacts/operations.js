@@ -1,16 +1,17 @@
-import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-
-//FIXME:
-
-axios.defaults.baseURL = "https://660e9554356b87a55c4f7eeb.mockapi.io";
+import {
+  requestGetAllContacts,
+  requestAddNewContact,
+  requestDeleteContact,
+} from "../services/apiHerokuapp";
 
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get("/contacts");
-      return response.data;
+      const response = await requestGetAllContacts();
+
+      return response;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
     }
@@ -21,8 +22,8 @@ export const addContact = createAsyncThunk(
   "contacts/addContact",
   async (newContact, thunkAPI) => {
     try {
-      const response = await axios.post("/contacts", newContact);
-      return response.data;
+      const response = await requestAddNewContact(newContact);
+      return response;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
     }
@@ -33,10 +34,22 @@ export const deleteContact = createAsyncThunk(
   "contacts/deleteContact",
   async (contactId, thunkAPI) => {
     try {
-      const response = await axios.delete(`/contacts/${contactId}`);
-      return response.data;
+      const response = await requestDeleteContact(contactId);
+      return response;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message);
     }
   }
 );
+
+// export const updateContact = createAsyncThunk(
+//   "contacts/deleteContact",
+//   async (contactId, contactData, thunkAPI) => {
+//     try {
+//       const response = await requestUpdateContact(contactId, contactData);
+//       return response;
+//     } catch (err) {
+//       return thunkAPI.rejectWithValue(err.message);
+//     }
+//   }
+// );

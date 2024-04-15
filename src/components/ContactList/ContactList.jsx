@@ -12,7 +12,10 @@ const ContactList = () => {
       {filteredContacts.length !== 0 ? (
         <ul className={css.contactList}>
           {filteredContacts.map((contact) => (
-            <Contact key={contact.id} contact={contact} />
+            // <Contact key={contact.id} contact={contact} />
+            <li key={contact.id}>
+              <Contact contact={contact} />
+            </li>
           ))}
         </ul>
       ) : (

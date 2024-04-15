@@ -7,7 +7,6 @@ import {
   setToken,
 } from "../services/apiHerokuapp";
 
-//Використовується у компоненті RegistrationForm на сторінці реєстрації
 export const register = createAsyncThunk(
   "auth/register",
   async (formData, thunkAPI) => {
@@ -21,13 +20,11 @@ export const register = createAsyncThunk(
   }
 );
 
-//Використовується у компоненті LoginForm на сторінці логіну
 export const login = createAsyncThunk(
   "auth/login",
   async (formData, thunkAPI) => {
     try {
       const response = await requestLogin(formData);
-      console.log("response: ", response);
 
       return response;
     } catch (err) {

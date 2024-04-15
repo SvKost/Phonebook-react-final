@@ -5,24 +5,28 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 
 import { selectIsLoading } from "../../redux/auth/selectors";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { fetchContacts, addContact } from "../../redux/contacts/operations";
+import { selectContacts } from "../../redux/contacts/selectors";
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
+  const contacts = useSelector(selectContacts);
   const isLoading = useSelector(selectIsLoading);
 
-  // useEffect(() => {
-  //   dispatch(); // TODO: change api request function
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
+  const handleAddContact = (formData) => {
+    dispatch(addContact(formData));
+  };
 
   return (
     <div>
-      {/* <Helmet> */}
       <title>ContactsPage</title>
-      {/* </Helmet> */}
-      <ContactForm />
+      <ContactForm onAddContact={handleAddContact} />
       <SearchBox />
-      <ContactList />
+      {contacts && <ContactList />}
       <div>{isLoading && "Request in progress..."}</div>
     </div>
   );
