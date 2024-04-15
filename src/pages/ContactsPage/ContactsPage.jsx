@@ -7,7 +7,7 @@ import { selectIsLoading } from "../../redux/auth/selectors";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-const Contacts = () => {
+const ContactsPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
 
@@ -18,7 +18,7 @@ const Contacts = () => {
   return (
     <div>
       {/* <Helmet> */}
-      <title>Contacts</title>
+      <title>ContactsPage</title>
       {/* </Helmet> */}
       <ContactForm />
       <SearchBox />
@@ -28,4 +28,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactsPage;

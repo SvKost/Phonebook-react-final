@@ -3,7 +3,7 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 import { login } from "../../redux/auth/operations";
 import { Helmet } from "react-helmet";
 
-const Login = () => {
+const LoginPage = () => {
   const dispatch = useDispatch();
 
   const onLogin = (formData) => {
@@ -13,11 +13,11 @@ const Login = () => {
   return (
     <div>
       {/* <Helmet> */}
-      <title>Login</title>
+      <title>Login Page</title>
       {/* </Helmet> */}
       <LoginForm onLogin={onLogin} />
     </div>
   );
 };
 
-export default Login;
+export default LoginPage;

@@ -3,7 +3,7 @@ import RegistrationForm from "../../components/RegistrationForm/RegistrationForm
 import { register } from "../../redux/auth/operations";
 import { Helmet } from "react-helmet";
 
-const Registration = () => {
+const RegistrationPage = () => {
   const dispatch = useDispatch();
 
   const onRegister = (formData) => {
@@ -13,11 +13,11 @@ const Registration = () => {
   return (
     <div>
       {/* <Helmet> */}
-      <title>Registration</title>
+      <title>Registration Page</title>
       {/* </Helmet> */}
       <RegistrationForm onRegister={onRegister} />
     </div>
   );
 };
 
-export default Registration;
+export default RegistrationPage;

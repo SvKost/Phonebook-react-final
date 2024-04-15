@@ -3,11 +3,11 @@ import { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import Home from "../pages/Home/Home";
+import HomePage from "../pages/HomePage/HomePage";
 import Layout from "./Layout/Layout";
-import Registration from "../pages/Registration/Registration";
-import Login from "../pages/Login/Login";
-import Contacts from "../pages/Contacts/Contacts";
+import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import ContactsPage from "../pages/ContactsPage/ContactsPage";
 import { refresh } from "../redux/auth/operations";
 import RestrictedRoute from "./RestrictedRoute";
 import PrivateRoute from "./PrivateRoute";
@@ -23,13 +23,13 @@ function App() {
     <Layout>
       <Suspense>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
 
           <Route
             path="/login"
             element={
               <RestrictedRoute>
-                <Login />
+                <LoginPage />
               </RestrictedRoute>
             }
           />
@@ -37,7 +37,7 @@ function App() {
             path="/register"
             element={
               <RestrictedRoute>
-                <Registration />
+                <RegistrationPage />
               </RestrictedRoute>
             }
           />
@@ -45,7 +45,7 @@ function App() {
             path="/contacts"
             element={
               <PrivateRoute>
-                <Contacts />
+                <ContactsPage />
               </PrivateRoute>
             }
           />
