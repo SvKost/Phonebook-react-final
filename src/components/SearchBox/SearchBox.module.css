@@ -16,15 +16,14 @@
   align-items: center;
   padding: 8px 15px;
   margin-bottom: 4px;
-  border: solid 1px grey;
-  border-radius: 5px;
+  border: solid 1px #0c92bbb9;
+  border-radius: 15px;
 }
 
-.input:hover {
-  border-color: rgb(88, 88, 88);
-}
-
-.input:focus {
+.input:hover,
+.input:focus,
+.input:active {
+  border: solid 1px #0c92bbb9;
+  box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
   outline: none;
-  border-color: blue;
 }

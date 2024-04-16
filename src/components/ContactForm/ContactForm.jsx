@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 
 import css from "./ContactForm.module.css";
 import { addContact } from "../../redux/contacts/operations";
+import Button from "../Button/Button";
 
 const PhonebookSchema = Yup.object().shape({
   name: Yup.string()
@@ -60,9 +61,7 @@ const ContactForm = () => {
             />
           </label>
 
-          <button className={css.button} type="submit">
-            Add contact
-          </button>
+          <Button type="submit">Add contact</Button>
         </Form>
       </Formik>
     </div>

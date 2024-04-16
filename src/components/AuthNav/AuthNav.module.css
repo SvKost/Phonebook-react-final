@@ -16,6 +16,7 @@
   justify-content: center;
   width: 90px;
   height: 36px;
+  border: solid 1px #0c92bbb9;
   border-radius: 15px;
   text-decoration: none;
 }
@@ -26,4 +27,5 @@
   color: #1b1b1b;
   background-color: #fff;
   border-radius: 15px;
+  border: solid 1px #0c92bbb9;
 }

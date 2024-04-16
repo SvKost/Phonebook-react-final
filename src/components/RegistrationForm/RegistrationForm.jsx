@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import css from "./RegistrationForm.module.css";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
+import Button from "../Button/Button";
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string()
@@ -86,14 +87,13 @@ const RegistrationForm = () => {
             />
           </label>
 
-          <button
-            className={css.button}
+          <Button
             type="submit"
             title="Click to register user"
             aria-label="Register new user"
           >
-            Sign up
-          </button>
+            Register
+          </Button>
         </Form>
       </Formik>
     </div>

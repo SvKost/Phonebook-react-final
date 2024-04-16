@@ -1,0 +1,17 @@
+@media screen and (max-width: 767px) {
+  .header {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #0c92bbb9;
+  }
+}
+.header {
+  margin-bottom: 10px;
+}

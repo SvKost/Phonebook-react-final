@@ -1,13 +1,16 @@
+@media screen and (max-width: 767px) {
+  .nav {
+    border-bottom: solid 1px #0c92bbb9;
+  }
+}
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 150px;
   height: 52px;
-  border-radius: 15px;
   padding: 8px;
   color: #f6f6f6;
-  background-color: #0c92bbb9;
   gap: 5px;
   margin-bottom: 10px;
 }
@@ -17,8 +20,10 @@
   justify-content: center;
   width: 90px;
   height: 36px;
+  border: solid 0.5px #0c92bbb9;
   border-radius: 15px;
   text-decoration: none;
+  transition: all 0.25s ease-in-out;
 }
 .link:hover {
   box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;

@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import css from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/auth/operations";
+import Button from "../Button/Button";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -66,14 +67,9 @@ const LoginForm = () => {
             />
           </label>
 
-          <button
-            className={css.button}
-            type="submit"
-            title="Click to sign in"
-            aria-label="Sign in"
-          >
-            Sign in
-          </button>
+          <Button type="submit" title="Click to log in" aria-label="Log in">
+            Log in
+          </Button>
         </Form>
       </Formik>
     </div>

@@ -1,20 +1,10 @@
-import { useDispatch } from "react-redux";
 import RegistrationForm from "../components/RegistrationForm/RegistrationForm";
-import { register } from "../redux/auth/operations";
 
 const RegistrationPage = () => {
-  // const dispatch = useDispatch();
-
-  // const onRegister = (formData) => {
-  //   dispatch(register(formData));
-  // };
-
   return (
     <div>
       <title>Registration Page</title>
-      <RegistrationForm
-      // onRegister={onRegister}
-      />
+      <RegistrationForm />
     </div>
   );
 };

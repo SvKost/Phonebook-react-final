@@ -29,7 +29,8 @@ img {
   max-width: 100%;
 }
 
-button {
+button,
+input {
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 }

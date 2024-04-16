@@ -2,11 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  border: solid 1px #0c92bbb9;
   min-width: 256px;
   width: 300px;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 10px;
+  background-color: #fff;
 }
 
 .contactItem:hover,
@@ -16,6 +17,8 @@
 
 .contactIcon {
   margin-right: 5px;
+  width: 12px;
+  height: 12px;
 }
 
 .contactInfo {
@@ -24,7 +27,6 @@
   align-items: baseline;
   justify-content: center;
   gap: 6px;
-  font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -33,17 +35,18 @@
 .contactBtn {
   display: flex;
   min-width: 90px;
-  padding: 10px;
+  height: 36px;
+  padding: 8px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   border-radius: 15px;
   line-height: 1.2;
   font-size: 16px;
-  border: none;
+  border: solid 0.5px #0c92bbb9;
   font-family: inherit;
-  color: #f6f6f6;
-  background-color: #0c92bbb9;
+  color: #1b1b1b;
+  background-color: inherit;
 }
 
 .contactBtn:hover,
