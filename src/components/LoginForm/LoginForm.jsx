@@ -3,6 +3,8 @@ import { ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import css from "./LoginForm.module.css";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/auth/operations";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -18,9 +20,11 @@ const INITIAL_FORM_DATA = {
   password: "",
 };
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
+  const dispatch = useDispatch();
+
   const handleSubmit = (userData, formActions) => {
-    onLogin(userData);
+    dispatch(login(userData));
     formActions.resetForm();
   };
 
