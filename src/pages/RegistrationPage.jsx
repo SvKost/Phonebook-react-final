@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
-import { register } from "../../redux/auth/operations";
+import RegistrationForm from "../components/RegistrationForm/RegistrationForm";
+import { register } from "../redux/auth/operations";
 import { Helmet } from "react-helmet";
 
 const RegistrationPage = () => {

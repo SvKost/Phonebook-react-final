@@ -7,12 +7,10 @@ import Layout from "./Layout/Layout";
 import { useDispatch } from "react-redux";
 import { refresh } from "../redux/auth/operations";
 
-const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
-const RegistrationPage = lazy(() =>
-  import("../pages/RegistrationPage/RegistrationPage")
-);
-const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
-const ContactsPage = lazy(() => import("../pages/ContactsPage/ContactsPage"));
+const HomePage = lazy(() => import("../pages/HomePage"));
+const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
+const LoginPage = lazy(() => import("../pages/LoginPage"));
+const ContactsPage = lazy(() => import("../pages/ContactsPage"));
 
 function App() {
   const dispatch = useDispatch();
