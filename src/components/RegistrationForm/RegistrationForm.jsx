@@ -3,6 +3,8 @@ import { ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import css from "./RegistrationForm.module.css";
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/operations";
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string()
@@ -23,9 +25,11 @@ const INITIAL_FORM_DATA = {
   password: "",
 };
 
-const RegistrationForm = ({ onRegister }) => {
+const RegistrationForm = () => {
+  const dispatch = useDispatch();
+
   const handleSubmit = (userData, formActions) => {
-    onRegister(userData);
+    dispatch(register(userData));
     formActions.resetForm();
   };
 
